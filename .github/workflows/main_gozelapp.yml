@@ -23,6 +23,11 @@ jobs:
         with:
           node-version: '22.x'
 
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -46,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5FE97C9CE84444BBBA0FE0DB10C64DE4 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4D6BEBA71228483E8C4D2A8C72C09665 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3260E53D05E14866A5AD3963EDAD8D77 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_ED6442532C494B028597A957A5D7F2EF }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_43B3CF720A6647C59113E2E5B1E9B156 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4C29895346204009B840CB06445EFAFC }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -57,5 +62,4 @@ jobs:
           app-name: 'Gozelapp'
           slot-name: 'Production'
           package: .
-
           
