@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой первый сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin: 2rem 0;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li:before {
+            content: "▸";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header, .main-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Добро пожаловать на мой сайт!</h1>
+            <p>Это простой одностраничный сайт, созданный в блокноте</p>
+        </header>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>Обо мне</h2>
+                <p>Привет! Я создал этот сайт чтобы показать, что даже с помощью простого блокнота можно сделать красивую веб-страницу.</p>
+            </div>
+
+            <div class="section">
+                <h2>Что я умею</h2>
+                <ul>
+                    <li>Создавать HTML страницы</li>
+                    <li>Использовать CSS для стилизации</li>
+                    <li>Размещать сайты на GitHub</li>
+                    <li>Работать с JavaScript</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Мои проекты</h2>
+                <p>Здесь будут ссылки на мои будущие проекты:</p>
+                <a href="#" class="button">Проект 1</a>
+                <a href="#" class="button">Проект 2</a>
+                <a href="#" class="button">Проект 3</a>
+            </div>
+
+            <div class="section">
+                <h2>Контакты</h2>
+                <p>Свяжитесь со мной:</p>
+                <a href="mailto:example@email.com" class="button">Написать email</a>
+                <a href="https://github.com/username" class="button">Мой GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Мой простой сайт. Создано с ❤️ в блокноте</p>
+    </footer>
+</body>
+</html>
